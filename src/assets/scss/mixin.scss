@@ -1,0 +1,306 @@
+@mixin userSelectNone {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+@mixin newPage() {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+@mixin page() {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	bottom: 0;
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+@mixin page4Home() {
+	position: absolute;
+	top: $header-height;
+	width: 100%;
+	bottom: 0;
+	/* min-height: 100%; */
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+@mixin page4Home4Scroll() {
+	position: absolute;
+	top: $header-height;
+	width: 100%;
+	/* bottom: 0; */
+	min-height: 100%;
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+@mixin pageHaveHeight4Scroll() {
+	position: absolute;
+	top: $header-height;
+	width: 100%;
+	min-height: 100%;
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+@mixin pageNoHeight4Scroll() {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+@mixin pageHaveHeight() {
+	position: absolute;
+	top: $header-height;
+	width: 100%;
+	bottom: 0;
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+@mixin pageMy {
+	position: absolute;
+	top: 0;
+	width:100%;
+	min-height: 100%;
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+@mixin pageBlackBG {
+	position: absolute;
+	top: 0;
+	width:100%;
+	min-height: 100%;
+	background-color: #FFFFFF;
+	font-size: 0.75rem;
+}
+@mixin pageBlackBGHaveHeight {
+	position: absolute;
+	top: $header-height;
+	width:100%;
+	min-height: 100%;
+	background-color: #FFFFFF;
+	font-size: 0.75rem;
+}
+@mixin pageWhiteBGHaveHeight {
+	position: absolute;
+	top: $header-height;
+	width:100%;
+	bottom: 0;
+	background-color: #FFFFFF;
+	font-size: 0.75rem;
+}
+@mixin pageMyChild {
+	position: absolute;
+	top: $header-height;
+	width: 100%;
+	bottom: 0;
+	background-color: $main-bg-color;
+	font-size: 0.75rem;
+}
+
+@mixin fixedBottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+@mixin border($color) {
+  border: none;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: $color;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+@mixin border-1px(){
+  position: relative;
+  &:after{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    content: ' ';
+  }
+}
+
+@mixin border-none(){
+  &:after{
+    display: none
+  }
+}
+
+@mixin bg-image($url){
+  background-image: url($url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image: url($url + "@3x.png");
+  }
+}
+// 扩展点击区域
+@mixin extend-click() {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+@mixin main-color() {
+  color: #fc633d;
+}
+
+@mixin btn($width) {
+  width: 100px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 17px;
+  border-radius: 40px;
+  border: none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  &:active {
+    font-size: 15px;
+  }
+}
+@mixin fileUploadWrapper($pd_buttom) {
+  position: relative;
+  padding-bottom: $pd_buttom;
+  background-color: #ffffff;
+  height: 0;
+  border: none;
+  overflow:hidden;
+  width:100%;
+  border: 1px solid #cccccc;
+  input {
+    width: 100%;
+    border: none;
+  }
+  .add_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border: none;
+  }
+  .show_pic {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .fileUpload {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    border: none;
+  }
+}
+@mixin wrapper(){
+  overflow: auto;
+  font-family: PingFang-SC-Medium;
+  background-color: $main-bg-color;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+@mixin topHeader() {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+@mixin cell() {
+  display: flex;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 10px 0 0px;
+  font-size: 15px;
+  color: #323232;
+  // border-bottom: 1px solid #e6e6e6;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-flow: row wrap;
+  align-content: space-between;
+  // &:last-of-type {
+  //   border-bottom: 1px solid transparent;
+  // }
+  .title {
+    flex: 0 0 90px;
+    margin-right: auto;
+  }
+  .titleMore {
+    flex: 0 0 115px;
+    margin-right: auto;
+  }
+  .dateStart {
+    flex: 0 0 90px;
+    text-align: left;
+  }
+  .separation {
+    flex: 0 0 16px;
+  }
+  .dateEnd {
+    flex: 0 0 90px;
+    text-align: right;
+  }
+  .value {
+    flex: 1;
+    text-align: right;
+    padding-right: 2px;
+    input {
+      display: right;
+      border: none;
+      outline: 0;
+      width: 96%;
+      text-align: right;
+      line-height: 46px;
+      font-size: 14px;
+    }
+  }
+  .clear {
+    flex: 0 0 15px; 
+    margin-left: 5px;
+    color: #dddddd;
+    .arrow_right{
+      display: inline-block;
+      background: url('../../common/images/arrow_right.png') no-repeat;
+      width: 13px;
+      height: 48px;
+      line-height: 48px;
+      content: ' '
+    }
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, user-scalable=no,minimal-ui">
+    <link rel="icon" href="./icon.ico">
+    <title>帮扶链</title>
+	<style type="text/css">
+		.maintain-page{
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    flex-direction: column;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background: #181f32;
+		    height: 100%;
+		    box-sizing: border-box;
+			text-align: center;
+		}
+		.maintain-code{
+		    line-height: 1;
+		    font-size: 3rem;
+		    font-weight: bolder;
+		    color: #ffae00;
+		}
+		.maintain-desc{
+		    font-size: 0.875rem;
+		    color: #ffffff;
+			line-height: 1.3em;
+		}
+		.maintain-handle{
+			width: 100%;
+		    margin-top: 30px;
+		}
+		.van-count-down{
+			color: #ffae00;
+		}
+		.placeholderLine10{
+			height: 10px;
+		}
+	</style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but assist-h5-app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+		<div class="maintain-page">
+			<div class="maintain-code">系统维护中</div>
+			<div class="placeholderLine10"></div>
+			<div class="maintain-desc">
+				<b id="leaveTime"></b><a href="http://www.helpChain.online:8086/#/home">返回首页</a>
+			</div>
+			<div class="maintain-desc">
+				维护内容：<br>1.优化部分页面的用户体验。<br>2.新增贡献值记录查询。
+			</div>
+		</div>
+	</div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script type="text/javascript">
+	let maintainEndTime = '2020/1/26 14:55:40';
+	//js部分
+	 function countTime(value) {
+		 //获取当前时间
+		 var date = new Date();
+		 var now = date.getTime();
+		 
+		 //设置截止时间
+		 //在pc端浏览器可以这样写
+		 var endDate = new Date(value);
+		 //移动端必须这样写，因为ios不支持日期中间是-链接，会报错
+		 //var endDate = new Date("2019/7/22 00:00:00");
+		 var end = endDate.getTime();
+		 //时间差
+		 var differTime = end - now;
+		 //定义变量,h,m,s保存倒计时的时间
+		 var h, m, s;
+		 let timer;
+		 if (differTime >= 0) {
+			 h = Math.floor(differTime / 1000 / 60 / 60);
+			 m = Math.floor(differTime / 1000 / 60 % 60);
+			 s = Math.floor(differTime / 1000 % 60);
+			 h = h < 10 ? ("0" + h) : h;
+			 m = m < 10 ? ("0" + m) : m;
+			 s = s < 10 ? ("0" + s) : s;
+			 let timeDom = "距离维护结束还有" + h + "时" + m + "分" + s + "秒";
+			 document.all["leaveTime"].innerHTML = timeDom;
+			 //递归调用函数所以是延时器不是定时器
+			 timer = setInterval(function () {
+				countTime(value)
+			 }, 1000);
+		 } else {
+			 clearInterval(timer);
+			 let timeDom ="已经维护结束";
+			 document.all["leaveTime"].innerHTML = timeDom;
+		 }
+	 }
+	 countTime(maintainEndTime)
+  </script>
+</html>

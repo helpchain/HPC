@@ -1,0 +1,187 @@
+/* 引入第三方或自定义的字体图标样式 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1410914 */
+  src: url('//at.alicdn.com/t/font_1410914_eyssbyyyf8i.eot');
+  src: url('//at.alicdn.com/t/font_1410914_eyssbyyyf8i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1410914_eyssbyyyf8i.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1410914_eyssbyyyf8i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1410914_eyssbyyyf8i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1410914_eyssbyyyf8i.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: 'iconfont';
+  font-style: normal !important;
+}
+
+.iconfont-cservice::before {
+  content: '\e68b';
+}
+
+.iconfont-share3::before {
+  content: '\e617';
+}
+
+.iconfont-arrow-to::before {
+  content: '\e615';
+}
+
+.iconfont-record::before {
+  content: '\ea56';
+}
+
+.iconfont-rank::before {
+  content: '\e610';
+}
+
+.iconfont-attendance::before {
+  content: '\e613';
+}
+
+.iconfont-mill2::before {
+  content: '\e609';
+}
+
+.iconfont-book::before {
+  content: '\e61e';
+}
+
+.iconfont-realname::before {
+  content: '\e60f';
+}
+
+.iconfont-task2::before {
+  content: '\e627';
+}
+
+.iconfont-task1::before {
+  content: '\e611';
+}
+
+.iconfont-word::before {
+  content: '\e616';
+}
+
+.iconfont-team::before {
+  content: '\e64e';
+}
+
+.iconfont-deal::before {
+  content: '\e688';
+}
+
+.iconfont-share2::before {
+  content: '\e807';
+}
+
+.iconfont-upload-pic::before {
+  content: '\e60c';
+}
+
+
+.iconfont-tag::before {
+  content: '\e66d';
+}
+
+.iconfont-share::before {
+  content: '\e618';
+}
+
+.iconfont-finished::before {
+  content: '\e6a9';
+}
+
+.iconfont-set::before {
+  content: '\e6b9';
+}
+
+.iconfont-mill::before {
+  content: '\e76d';
+}
+
+.iconfont-clock::before {
+  content: '\e608';
+}
+
+.iconfont-pai::before {
+  content: '\e626';
+}
+
+.iconfont-weichat::before {
+  content: '\e649';
+}
+
+.iconfont-name::before {
+  content: '\e60d';
+}
+
+
+.iconfont-message::before {
+  content: '\e612';
+}
+
+.iconfont-pass::before {
+  content: '\e7fa';
+}
+
+.iconfont-safety::before {
+  content: '\e603';
+}
+
+.iconfont-tanhao::before {
+  content: '\e687';
+}
+
+.iconfont-i::before {
+  content: '\e6e3';
+}
+
+.iconfont-ticket::before {
+  content: '\e635';
+}
+
+.iconfont-love2::before {
+  content: '\e648';
+}
+
+.iconfont-love::before {
+  content: '\e602';
+}
+
+.iconfont-question::before {
+  content: '\e6a6';
+}
+
+.iconfont-guide::before {//新手指南
+  content: '\e6f8';
+}
+.iconfont-vote::before {//投票
+  content: '\e63a';
+}
+.iconfont-crown::before {//皇冠
+  content: '\e762';
+}
+.iconfont-merchant::before {//商家
+  content: '\e61d';
+}
+//arrow
+.iconfont-right-arrow2::before {//右箭头
+  content: '\e605';
+}
+.iconfont-right-arrow::before {//右箭头
+  content: '\e645';
+}
+.iconfont-left-arrow::before {//左箭头
+  content: '\e607';
+}
+//fullscreen
+.iconfont-close-fullscreen::before {//关闭全屏
+  content: '\e606';
+}
+.iconfont-open-fullscreen::before {//开启全屏
+  content: '\e601';
+}
+.iconfont-refresh::before {//刷新
+  content: '\e625';
+}
+// <van-icon class-prefix="my-icon" name="extra" />

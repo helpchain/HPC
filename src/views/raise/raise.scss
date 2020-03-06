@@ -1,0 +1,306 @@
+@import '~@/assets/scss/variable.scss';
+	.raise{
+		// padding: $boxPadding1;
+		color: $mainTextColor;
+		background-color: #14243c;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow-y: scroll;
+		.helpBox{
+			position:relative;
+			display: flex;
+			padding: 0 $boxPadding2;
+			box-sizing: border-box;
+			align-items: center;
+			background: linear-gradient(left top, #ffae00 , #ffae00) !important;
+			height: 30px;
+			line-height: 30px;
+			// height: $header-height;
+			// line-height: $header-height;
+			.leftBox{
+				flex: 0 0 24px;
+				color: red;
+				font-size: 1.2rem;
+			}
+			.centerBox{
+			  flex: 1;
+			  text-align: center;
+			  font-size: 0.75rem;
+			  // color:$mainTextColor;
+			}
+			.rightBox{
+				flex: 0 0 24px;
+				text-align: right;
+				&.text{
+					color: $main-adorn-color;
+					font-size: 0.75rem;
+					// color: $mainTextColor;
+				}
+				&.icon{
+					color: linear-gradient(left right, #ffae00 , #ffae00);
+					font-size: 11px;
+				}
+			}
+		}
+		.iconTextBox{
+			display: flex;
+			flex-direction: row;
+			align-content: center;
+			align-items: center;
+			.leftIcon{
+				flex: 0 0 16px;
+				color: linear-gradient(left right, #ffae00 , #e10000) !important;
+			}
+			.iconText{
+				flex: 1;
+				margin-left: 6px;
+			}
+			.rightBox{
+				flex: 0 0 100px;
+				float: right;
+			}
+		}
+		.raiseHeader{
+			padding:$boxPadding2 $boxPadding2;
+		}
+		$avatorHeight: 20px;
+		.whoAreYou{
+			display: flex;
+			padding:$boxPadding2 $boxPadding2;
+			flex-direction: row;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			.avator{
+				flex: 0 0 $avatorHeight;
+			}
+			.textInfo{
+				flex: 1;
+				font-size: 0.812rem;
+				padding-left: 0.375rem;
+				height: 1em;
+				display: table-cell;
+				.text1{font-weight: bold;}
+				.text2{color: #BABABA;margin-left: 5px;}
+			}
+			.rightBox{
+				flex: 0 0 80px;
+				height: $avatorHeight;
+				text-align: right;
+			}
+		}
+		.content1{
+			padding: 0 $boxPadding2;
+			.title{
+				font-size: 1.125rem;
+				line-height: 1.375em;
+			}
+			.box{
+				display: flex;
+				background-color: inherit;
+				padding:$boxPadding2 0;
+				box-sizing:border-box !important;
+				// color:$mainTextColor;
+			}
+			.box2{
+				margin-top: $marginTop2;
+				text-align: center;
+				.flexC{
+					flex:1;
+					.digit{
+						color: $main-adorn-color;
+					}
+					.text{
+						font-size: $fs-1;
+						margin-top: 3px;
+					}
+				}
+			}
+		}
+		.flex{
+			display: flex;
+			background-color: inherit;
+			padding:$boxPadding2 0;
+			box-sizing:border-box !important;
+			flex-direction: row;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			// color:$mainTextColor;
+			.flexMedial{
+				flex: 1;
+			}
+			.flexLeft{
+				flex: 0 0 24px;
+				.ticket{
+					font-size: 1.5rem;
+					color: $main-adorn-color;
+				}
+			}
+			.flexCenter{
+				flex: 1;
+				font-size: 0.75rem;
+				line-height: 1.125em;
+				padding: 0 0.375rem;
+			}
+			.flexRight{
+				flex: 0 0 1.25rem;
+				.iconfont-i{
+					color: $main-adorn-color;
+				}
+			}
+		}
+		.story,.materialProve{
+			padding-left: $boxPadding2;
+			padding-right: $boxPadding2;
+			.title{
+				font-size: 0.875rem;
+				font-weight: bold;
+			}
+			.textRight{
+				text-align: right;
+				color: $main-adorn-color;
+			}
+			.content{
+				font-size: 12px;
+				letter-spacing: 1px;
+				line-height: 1.2em;
+			}
+			.imageList{
+				flex-wrap: wrap;
+				flex-direction: row;
+				align-content: left;
+				align-items: center;
+				justify-content: left;
+				img{
+					flex: 0 0 70px;
+					width: 70px;
+					height: 70px;
+					padding-right: 6px;
+					&::last-child{
+						padding-right: 0;
+					}
+				}
+			}
+		}
+		.materialProve{
+			.flexProveLeft{
+				flex: 0 0 30px;
+				.iconfont-pass{
+					color: #DE0000;
+					font-size: 28px;
+				}
+			}
+			.proveText1{
+				font-size: 11px;
+				line-height: 1.2em;
+				padding-left: 4px;
+				justify-content:space-between;
+			}
+			.proveContent{
+				padding: $boxPadding2;
+				background-color: $main-box-color;
+				.flex{
+					padding-top: 0px !important;
+				}
+				.contentBox{
+					.title2{
+						font-size: 11px;
+						padding-top: $boxPadding2;
+					}
+					.contentText1{
+						margin-top: 8px;
+						font-size: 11px;
+						line-height: 1.2em;
+						letter-spacing: 1px;
+					}
+				}
+				.knowMore{
+					font-size: 0.75rem;
+					color: $main-adorn-color;
+					margin-top: 10px;
+				}
+			}
+			.proverList{
+				margin-top: 12px;
+				.proveLabel{
+					font-size: 14px !important;
+					span{
+						color: $main-adorn-color;
+					}
+				}
+				.iDo{
+					flex: 0 0 70px;
+					font-size: 12px !important;
+					text-align: right;
+					text-decoration: underline;
+					color: $main-adorn-color;
+				}
+				.flexProveMore{
+					flex: 0 0 50px;
+					text-align: right;
+					.iconfont-right-arrow{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+		.records{
+			padding: $boxPadding2;
+			.title{
+				font-size: 0.937rem;
+			}
+			.flexsBox{
+				display: flex;
+				// background-color: $main-box-color;
+				box-sizing:border-box !important;
+				color:$mainTextColor;
+				margin-top: 12px;
+				border-bottom: 1px solid $main-bg-color;
+				&.row{
+					flex-direction: row;
+					align-items: center;
+				}
+				.flexLeft1{
+					flex: 0 0 44px;
+				}
+				.flexThis{
+					flex:1;
+					text-align: left;
+					padding-left: 8px;
+					margin-top: 6px;
+					padding-bottom: 6px;
+					&.column{
+						flex-direction: column;
+					}
+					.line1{
+						overflow: hidden;
+						clear: both;
+						width: 100%;
+						font-size: 13px;
+						span{color: $main-adorn-color;}
+					}
+					.line2{
+						overflow: hidden;
+						clear: both;
+						width: 100%;
+						margin-top: 3px;
+						font-size: 12px;
+						text-align: justify;
+						line-height: 1.2em;
+					}
+					.line3{
+						overflow: hidden;
+						clear: both;
+						width: 100%;
+						font-size: 11px;
+						span{color: $main-adorn-color;}
+						margin-top: 3px;
+					}
+				}
+			}
+		}
+	}
