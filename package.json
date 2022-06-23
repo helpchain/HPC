@@ -16,7 +16,7 @@
     "exif-js": "^2.3.0",
     "fastclick": "^1.0.6",
     "html2canvas": "^1.0.0-rc.5",
-    "jsdom": "^13.2.0",
+    "jsdom": "^16.5.0",
     "jsencrypt": "^3.0.0-rc.1",
     "qrcodejs2": "^0.0.2",
     "qs": "^6.8.0",
